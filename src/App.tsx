@@ -2,10 +2,22 @@ import React, { useState } from "react";
 import "./App.css";
 import "./components/CarDropdown";
 import CarDropdown from "./components/CarDropdown";
+import Scheduler from "./components/Scheduler";
+import "react-calendar/dist/Calendar.css";
 import { carList, initialCar } from "./data/carList";
 
 function App() {
   const [currentSelection, setCurrentSelection] = useState(initialCar);
+  const today = new Date();
+
+  // set first valid date to the nearest weekday
+  const [date, setDate] = useState(
+    today.getDay() === 6
+      ? new Date(new Date().setDate(today.getDate() + 2))
+      : today.getDay() === 0
+      ? new Date(new Date().setDate(today.getDate() + 1))
+      : today
+  );
 
   // Sets state and prefills selection depending on input
   const handleDropdown = (e: React.MouseEvent, category: string) => {
@@ -65,6 +77,7 @@ function App() {
         src={currentSelection.image}
         alt={`${currentSelection.year} ${currentSelection.brand} ${currentSelection.model} ${currentSelection.trim}`}
       />
+      <Scheduler date={date} setDate={setDate} />
     </div>
   );
 }
