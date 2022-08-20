@@ -1,11 +1,33 @@
-import { useState, MouseEvent, SetStateAction } from "react";
+import { useState, MouseEvent, SetStateAction, Dispatch } from "react";
 import Calendar, { OnChangeDateCallback } from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
 interface schedulerProps {
   date: Date;
   setDate: OnChangeDateCallback;
+  time: String;
+  setTime: Dispatch<SetStateAction<string>>;
 }
-const Scheduler = ({ date, setDate }: schedulerProps) => {
+const Scheduler = ({ date, setDate, time, setTime }: schedulerProps) => {
+  const timeslots = [
+    "9:00",
+    "9:30",
+    "10:00",
+    "10:30",
+    "11:00",
+    "11:30",
+    "12:00",
+    "12:30",
+    "1:00",
+    "1:30",
+    "2:00",
+    "2:30",
+    "3:00",
+    "3:30",
+    "4:00",
+    "4:30",
+    "5:00",
+  ];
   return (
     <div className="calendarDiv">
       <h3>Select a date for your test drive</h3>
@@ -19,6 +41,18 @@ const Scheduler = ({ date, setDate }: schedulerProps) => {
       <h3>{`${date.toLocaleString("default", {
         month: "long",
       })} ${date.getDate()}, ${date.getFullYear()}`}</h3>
+      <div className="timePickerDiv">
+        <h3>Please schedule a time below:</h3>
+        <select
+          className="timePicker"
+          defaultValue={time as string}
+          onClick={(e) => setTime((e.target as HTMLSelectElement).value)}
+        >
+          {timeslots.map((timeslot) => (
+            <option key={timeslot}>{timeslot}</option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 };

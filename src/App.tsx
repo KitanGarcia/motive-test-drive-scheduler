@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "./App.css";
-import "./components/CarDropdown";
-import CarDropdown from "./components/CarDropdown";
+import CarSelection from "./components/CarSelection";
+import ContactForm from "./components/ContactForm";
 import Scheduler from "./components/Scheduler";
-import "react-calendar/dist/Calendar.css";
 import { carList, initialCar } from "./data/carList";
+import { userInfo } from "./types/userInfo";
 
 function App() {
   const [currentSelection, setCurrentSelection] = useState(initialCar);
   const today = new Date();
+  const [contactInfo, setContactInfo] = useState({} as userInfo);
 
   // set first valid date to the nearest weekday
   const [date, setDate] = useState(
@@ -18,6 +19,7 @@ function App() {
       ? new Date(new Date().setDate(today.getDate() + 1))
       : today
   );
+  const [time, setTime] = useState("9:00");
 
   // Sets state and prefills selection depending on input
   const handleDropdown = (e: React.MouseEvent, category: string) => {
@@ -61,23 +63,26 @@ function App() {
     }
   };
 
+  const validatePhoneNumber = () => {};
+
+  const validateEmail = () => {};
+
+  // Sends user's input for test drive to be scheduled
+  const handleSubmit = () => {
+    console.log("SUBMIT");
+  };
+
   return (
     <div className="App">
-      <h1>Schedule a Test Drive</h1>
-      <CarDropdown
+      <CarSelection
         selection={currentSelection}
         handleDropdown={handleDropdown}
       />
-      <img
-        className={
-          currentSelection.brand === "Dodge"
-            ? "dodgeDropdownImage"
-            : "dropdownImage"
-        }
-        src={currentSelection.image}
-        alt={`${currentSelection.year} ${currentSelection.brand} ${currentSelection.model} ${currentSelection.trim}`}
-      />
-      <Scheduler date={date} setDate={setDate} />
+      <Scheduler date={date} setDate={setDate} time={time} setTime={setTime} />
+      <ContactForm contactInfo={contactInfo} setContactInfo={setContactInfo} />
+      <button className="scheduleButton" onClick={handleSubmit}>
+        Schedule Test Drive
+      </button>
     </div>
   );
 }

@@ -26,9 +26,9 @@ export const carList: carData = {
       Mustang: {
         Mach1:
           "https://build.ford.com/dig/Ford/Mustang/2022/HD-FULL/Image%5B%7CFord%7CMustang%7C2022%7C1%7C1.%7C600A.P8R..PJS..88W.891.SED.574.12U.13Q.COU.856.90N.64S.T3D.RWD.67G.96B.45T.990.19B.DIS.91N.50B.14A.SSR.58E.IDAAQ.SY3.AML.44U.MAC.LESS.CLO.%5D/EXT/1/vehicle.png",
-        EcoBoost_Premium_Convertible:
+        "EcoBoost Premium Convertible":
           "https://build.ford.com/dig/Ford/Mustang/2022/HD-FULL/Image%5B%7CFord%7CMustang%7C2022%7C1%7C1.%7C201A.P8U..PAE..885.89X.~2Z500_BCMAD.68B.SED.574.43M.77S.WCC.12U.UCA.13K.CON.51H.MDS.66W.649.T3T.14L.RWD.45Y.99H.19B.AFP.HSW.52C.DIS.91N.50B.14A.77R.SSR.583.912.SY3.JCBAP.44U.EBST.PRE.PLT.%5D/EXT/1/vehicle.png",
-        Shelby_GT500:
+        "Shelby GT500":
           "https://build.ford.com/dig/Ford/Mustang/2022/HD-FULL/Image%5B%7CFord%7CMustang%7C2022%7C1%7C1.%7C950A.P8S..PHY..88B.89V.SED.574.WCC.59B.COU.51H.55C.64H.TBJ.RES.RWD.67K.457.99J.19B.18F.AFP.DIS.91N.50B.SSR.583.912.SY3.67T.44G.GT5.PRE.LET.%5D/EXT/1/vehicle.png",
       },
     },
@@ -57,7 +57,7 @@ export const carList: carData = {
       Durango: {
         SXT: "https://www.dodge.com/mediaserver/iris?COSY-EU-100-1713uLDEMTV1r9s%25WBXaBKFmfKSLC9gIQALMc6UhVkmGBfM9IW2VRkr72kVTd9pivwXGXQpMTV1rUp3g6OQCckPquBhS1U%25jzbTllxA0zmil%253QFmwpDkpd2dTBoM&&pov=fronthero&width=1450&height=546&bkgnd=white&resp=jpg&cut=&x=&y=&w=&h=",
         GT: "https://www.dodge.com/mediaserver/iris?COSY-EU-100-1713uLDEMTV1r9s%25WBXaBKFmfKSLC9gIQALMc6UhVkmGBfM9IW2VRkr72kVTd9pivwXGXQpMTV1rUh4g6OQCckPquBhS1U%25jzbTllxA0zmij%253QFmwpEkpd2dYBoM&&pov=fronthero&width=1450&height=546&bkgnd=white&resp=jpg&cut=&x=&y=&w=&h=",
-        GT_PLUS:
+        "GT PLUS":
           "https://www.dodge.com/mediaserver/iris?COSY-EU-100-1713uLDEMTV1r9s%25WBXaBKFmfKSLC9gIQALMc6UhVkmGBfM9IW2VRkr72kVTd9pivwXGXQpMTV1rU7ug6OQCckPquBhS1U%25jzbTllxA0zmij%253QFmwpdkpd2dMBoM&&pov=fronthero&width=1450&height=546&bkgnd=white&resp=jpg&cut=&x=&y=&w=&h=",
       },
       Ram: {
@@ -69,9 +69,9 @@ export const carList: carData = {
           "https://www.ramtrucks.com/mediaserver/iris?COSY-EU-100-1713uLDEMTV1r9s%25WBXaBKFmfKSLC9gIQALMc6UhVk6GBfM9IW2VRkr72kVTd9po5wXGXQpMTV1rU76g6OQCckPquBhS1U%25jzbTllxA0kcIjnaQFmwpBkpd2UwBoM4ljIU&&pov=fronthero&width=1450&height=546&bkgnd=white&resp=jpg&cut=&x=&y=&w=&h=",
       },
       Charger: {
-        SXT_RWD:
+        "SXT RWD":
           "https://www.dodge.com/mediaserver/iris?COSY-EU-100-1713uLDEMTV1r9s%25WBXaBKFmfKSLC9gIQALMc6UhVkmGBfM9IW2VRkr72kVTd9pavwXGXQpMTV1rUp3g6OQCckPquBhS1U%25jzbTllxA0omimnvQFmwFhkpd2wqBoM&&pov=fronthero&width=1450&height=546&bkgnd=white&resp=jpg&cut=&x=&y=&w=&h=",
-        GT_RWD:
+        "GT RWD":
           "https://www.dodge.com/mediaserver/iris?COSY-EU-100-1713uLDEMTV1r9s%25WBXaBKFmfKSLC9gIQALMc6UhVkmGBfM9IW2VRkr72kVTd9pavwXGXQpMTV1rU7Wg6OQCckPquBhS1U%25jzbTllxA0omignvQFmwFukpd2wIBoM&&pov=fronthero&width=1450&height=546&bkgnd=white&resp=jpg&cut=&x=&y=&w=&h=",
         "R/T":
           "https://www.dodge.com/mediaserver/iris?COSY-EU-100-1713uLDEMTV1r9s%25WBXaBKFmfKSLC9gIQALMc6UhVkmGBfM9IW2VRkr72kVTd9pavwXGXQpMTV1rUKLg6OQCckPquBhS1U%25jzbTllxA0omiVnvQFmwF3kpd2z6BoM&&pov=fronthero&width=1450&height=546&bkgnd=white&resp=jpg&cut=&x=&y=&w=&h=",
@@ -92,8 +92,8 @@ export const carList: carData = {
       },
       Mustang: {
         Mach1: "https://via.placeholder.com/770x430",
-        EcoBoost_Premium_Convertible: "https://via.placeholder.com/770x430",
-        Shelby_GT500: "https://via.placeholder.com/770x430",
+        "EcoBoost Premium Convertible": "https://via.placeholder.com/770x430",
+        "Shelby GT500": "https://via.placeholder.com/770x430",
       },
     },
     Chevrolet: {
@@ -117,7 +117,7 @@ export const carList: carData = {
       Durango: {
         SXT: "https://via.placeholder.com/770x430",
         GT: "https://via.placeholder.com/770x430",
-        GT_PLUS: "https://via.placeholder.com/770x430",
+        "GT PLUS": "https://via.placeholder.com/770x430",
       },
       Ram: {
         Tradesman: "https://via.placeholder.com/770x430",
@@ -125,8 +125,8 @@ export const carList: carData = {
         Warlock: "https://via.placeholder.com/770x430",
       },
       Charger: {
-        SXT_RWD: "https://via.placeholder.com/770x430",
-        GT_RWD: "https://via.placeholder.com/770x430",
+        "SXT RWD": "https://via.placeholder.com/770x430",
+        "GT RWD": "https://via.placeholder.com/770x430",
         "R/T": "https://via.placeholder.com/770x430",
       },
     },
@@ -145,8 +145,8 @@ export const carList: carData = {
       },
       Mustang: {
         Mach1: "https://via.placeholder.com/770x430",
-        EcoBoost_Premium_Convertible: "https://via.placeholder.com/770x430",
-        Shelby_GT500: "https://via.placeholder.com/770x430",
+        "EcoBoost Premium Convertible": "https://via.placeholder.com/770x430",
+        "Shelby GT500": "https://via.placeholder.com/770x430",
       },
     },
     Chevrolet: {
@@ -170,7 +170,7 @@ export const carList: carData = {
       Durango: {
         SXT: "https://via.placeholder.com/770x430",
         GT: "https://via.placeholder.com/770x430",
-        GT_PLUS: "https://via.placeholder.com/770x430",
+        "GT PLUS": "https://via.placeholder.com/770x430",
       },
       Ram: {
         Tradesman: "https://via.placeholder.com/770x430",
@@ -178,8 +178,8 @@ export const carList: carData = {
         Warlock: "https://via.placeholder.com/770x430",
       },
       Charger: {
-        SXT_RWD: "https://via.placeholder.com/770x430",
-        GT_RWD: "https://via.placeholder.com/770x430",
+        "SXT RWD": "https://via.placeholder.com/770x430",
+        "GT RWD": "https://via.placeholder.com/770x430",
         "R/T": "https://via.placeholder.com/770x430",
       },
     },
@@ -198,8 +198,8 @@ export const carList: carData = {
       },
       Mustang: {
         Mach1: "https://via.placeholder.com/770x430",
-        EcoBoost_Premium_Convertible: "https://via.placeholder.com/770x430",
-        Shelby_GT500: "https://via.placeholder.com/770x430",
+        "EcoBoost Premium Convertible": "https://via.placeholder.com/770x430",
+        "Shelby GT500": "https://via.placeholder.com/770x430",
       },
     },
     Chevrolet: {
@@ -223,7 +223,7 @@ export const carList: carData = {
       Durango: {
         SXT: "https://via.placeholder.com/770x430",
         GT: "https://via.placeholder.com/770x430",
-        GT_PLUS: "https://via.placeholder.com/770x430",
+        "GT PLUS": "https://via.placeholder.com/770x430",
       },
       Ram: {
         Tradesman: "https://via.placeholder.com/770x430",
@@ -231,8 +231,8 @@ export const carList: carData = {
         Warlock: "https://via.placeholder.com/770x430",
       },
       Charger: {
-        SXT_RWD: "https://via.placeholder.com/770x430",
-        GT_RWD: "https://via.placeholder.com/770x430",
+        "SXT RWD": "https://via.placeholder.com/770x430",
+        "GT RWD": "https://via.placeholder.com/770x430",
         "R/T": "https://via.placeholder.com/770x430",
       },
     },
@@ -251,8 +251,8 @@ export const carList: carData = {
       },
       Mustang: {
         Mach1: "https://via.placeholder.com/770x430",
-        EcoBoost_Premium_Convertible: "https://via.placeholder.com/770x430",
-        Shelby_GT500: "https://via.placeholder.com/770x430",
+        "EcoBoost Premium Convertible": "https://via.placeholder.com/770x430",
+        "Shelby GT500": "https://via.placeholder.com/770x430",
       },
     },
     Chevrolet: {
@@ -276,7 +276,7 @@ export const carList: carData = {
       Durango: {
         SXT: "https://via.placeholder.com/770x430",
         GT: "https://via.placeholder.com/770x430",
-        GT_PLUS: "https://via.placeholder.com/770x430",
+        "GT PLUS": "https://via.placeholder.com/770x430",
       },
       Ram: {
         Tradesman: "https://via.placeholder.com/770x430",
@@ -284,8 +284,8 @@ export const carList: carData = {
         Warlock: "https://via.placeholder.com/770x430",
       },
       Charger: {
-        SXT_RWD: "https://via.placeholder.com/770x430",
-        GT_RWD: "https://via.placeholder.com/770x430",
+        "SXT RWD": "https://via.placeholder.com/770x430",
+        "GT RWD": "https://via.placeholder.com/770x430",
         "R/T": "https://via.placeholder.com/770x430",
       },
     },
