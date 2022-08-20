@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.carDropdown {
+  height: 40px;
+  width: 80px;
+  margin: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.dropdownImage {
+  width: 1075px;
+  height: 600px;
+}
+
+.dodgeDropdownImage {
+  width: 1500px;
+  height: 660px;
+}
