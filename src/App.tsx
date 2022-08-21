@@ -10,6 +10,10 @@ function App() {
   const [currentSelection, setCurrentSelection] = useState(initialCar);
   const today = new Date();
   const [contactInfo, setContactInfo] = useState({} as userInfo);
+  const [showFirstNameError, setShowFirstNameError] = useState(false);
+  const [showLastNameError, setShowLastNameError] = useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
+  const [showPhoneError, setShowPhoneError] = useState(false);
 
   // set first valid date to the nearest weekday
   const [date, setDate] = useState(
@@ -63,13 +67,55 @@ function App() {
     }
   };
 
-  const validatePhoneNumber = () => {};
+  const isInvalidPhone = () => {
+    return true;
+  };
 
-  const validateEmail = () => {};
+  const validateContactInfo = () => {
+    setShowFirstNameError(
+      !contactInfo.firstName || contactInfo.firstName.length === 0
+        ? true
+        : false
+    );
+    setShowLastNameError(
+      !contactInfo.lastName || contactInfo.lastName.length === 0 ? true : false
+    );
+    setShowPhoneError(
+      !contactInfo.phoneNumber ||
+        contactInfo.phoneNumber.length === 0 ||
+        isInvalidPhone()
+        ? true
+        : false
+    );
+    setShowEmailError(
+      !contactInfo.email || contactInfo.email.length === 0 || isInvalidPhone()
+        ? true
+        : false
+    );
+    console.log(showFirstNameError);
+    console.log(showLastNameError);
+    console.log(showPhoneError);
+    console.log(showEmailError);
+    if (
+      showFirstNameError ||
+      showLastNameError ||
+      showPhoneError ||
+      showEmailError
+    ) {
+      return false;
+    }
+    return true;
+  };
 
   // Sends user's input for test drive to be scheduled
   const handleSubmit = () => {
     console.log("SUBMIT");
+    console.log(contactInfo);
+    if (validateContactInfo()) {
+      console.log("YEAH, we can send the data");
+    } else {
+      console.log("ERRORS");
+    }
   };
 
   return (
@@ -79,7 +125,14 @@ function App() {
         handleDropdown={handleDropdown}
       />
       <Scheduler date={date} setDate={setDate} time={time} setTime={setTime} />
-      <ContactForm contactInfo={contactInfo} setContactInfo={setContactInfo} />
+      <ContactForm
+        contactInfo={contactInfo}
+        setContactInfo={setContactInfo}
+        showFirstNameError={showFirstNameError}
+        showLastNameError={showLastNameError}
+        showPhoneError={showPhoneError}
+        showEmailError={showEmailError}
+      />
       <button className="scheduleButton" onClick={handleSubmit}>
         Schedule Test Drive
       </button>

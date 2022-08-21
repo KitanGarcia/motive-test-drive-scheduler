@@ -33,6 +33,7 @@ const Scheduler = ({ date, setDate, time, setTime }: schedulerProps) => {
       <h3>Select a date for your test drive</h3>
       <Calendar
         onChange={setDate}
+        minDetail={"year"}
         minDate={new Date()}
         maxDate={new Date(new Date().setDate(new Date().getDate() + 14))}
         value={date}
@@ -42,7 +43,7 @@ const Scheduler = ({ date, setDate, time, setTime }: schedulerProps) => {
         month: "long",
       })} ${date.getDate()}, ${date.getFullYear()}`}</h3>
       <div className="timePickerDiv">
-        <h3>Please schedule a time below:</h3>
+        <h3>Schedule a time below</h3>
         <select
           className="timePicker"
           defaultValue={time as string}
