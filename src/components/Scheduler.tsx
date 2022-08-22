@@ -1,4 +1,4 @@
-import { useState, MouseEvent, SetStateAction, Dispatch } from "react";
+import { SetStateAction, Dispatch } from "react";
 import Calendar, { OnChangeDateCallback } from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
@@ -28,14 +28,21 @@ const Scheduler = ({ date, setDate, time, setTime }: schedulerProps) => {
     "4:30",
     "5:00",
   ];
+
+  const pm =
+    (parseInt(time.split(":")[0]) <= 5 && parseInt(time.split(":")[0]) >= 1) ||
+    parseInt(time.split(":")[0]) === 12
+      ? true
+      : false;
+
   return (
     <div className="calendarDiv">
       <h3>Select a date for your test drive</h3>
       <Calendar
         onChange={setDate}
         minDetail={"year"}
-        minDate={new Date()}
-        maxDate={new Date(new Date().setDate(new Date().getDate() + 14))}
+        minDate={new Date(new Date().setDate(new Date().getDate() + 1))}
+        maxDate={new Date(new Date().setDate(new Date().getDate() + 15))}
         value={date}
         tileDisabled={({ date }) => date.getDay() === 0 || date.getDay() === 6}
       />
@@ -53,6 +60,7 @@ const Scheduler = ({ date, setDate, time, setTime }: schedulerProps) => {
             <option key={timeslot}>{timeslot}</option>
           ))}
         </select>
+        <h3 className="amPm">{pm ? "PM" : "AM"}</h3>
       </div>
     </div>
   );

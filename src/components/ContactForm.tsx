@@ -1,4 +1,4 @@
-import { SetStateAction, Dispatch, useRef, ChangeEvent } from "react";
+import { SetStateAction, Dispatch, ChangeEvent } from "react";
 import { userInfo } from "../types/userInfo";
 
 interface contactFormProps {
@@ -23,38 +23,56 @@ const ContactForm = ({
     info[key] = e.target.value;
     setContactInfo(info);
   };
+  const changeLabelColor = (field: string) => {
+    const label = document.querySelector(`.${field}Label`);
+    label?.classList.toggle("activeText");
+  };
 
   return (
     <div className="contactForm">
       <div>
+        <label className="firstNameLabel">First Name</label>
         <input
           type="text"
           onChange={(e) => handleForm(e, "firstName")}
-          placeholder="First name"
+          placeholder="John"
+          onFocus={() => changeLabelColor("firstName")}
+          onBlur={() => changeLabelColor("firstName")}
         />
         {showFirstNameError && <p>Please enter your first name</p>}
       </div>
       <div>
+        <label className="lastNameLabel">Last Name</label>
         <input
           type="text"
           onChange={(e) => handleForm(e, "lastName")}
-          placeholder="Last name"
+          placeholder="Doe"
+          onFocus={() => changeLabelColor("lastName")}
+          onBlur={() => changeLabelColor("lastName")}
         />
         {showLastNameError && <p>Please enter your last name</p>}
       </div>
       <div>
+        <label className="phoneNumberLabel">Phone Number</label>
         <input
           type="text"
           onChange={(e) => handleForm(e, "phoneNumber")}
-          placeholder="Phone number"
+          placeholder="xxx-xxx-xxxx"
+          onFocus={() => changeLabelColor("phoneNumber")}
+          onBlur={() => changeLabelColor("phoneNumber")}
         />
-        {showPhoneError && <p>Please enter a valid phone number</p>}
+        {showPhoneError && (
+          <p>Please enter a valid phone number: xxx-xxx-xxxx</p>
+        )}
       </div>
       <div>
+        <label className="emailLabel">Email Address</label>
         <input
           type="text"
           onChange={(e) => handleForm(e, "email")}
-          placeholder="Email address"
+          placeholder="email@example.com"
+          onFocus={() => changeLabelColor("email")}
+          onBlur={() => changeLabelColor("email")}
         />
         {showEmailError && <p>Please enter a valid email address</p>}
       </div>
